@@ -1,0 +1,149 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("Montserrat.ttf");
+}
+
+body {
+	font-family: Montserrat;
+	background-image: url("background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+.dragging {
+	user-select: none;
+}
+
+.column, #addColumnHolder {
+	background: #DFE3E6;
+	border-radius: 3px;
+	width: 250px;
+	flex-shrink: 0;
+	max-height: 100%;
+	float: left;
+	display: flex; 
+	flex-direction: column;
+	margin-top: 8px;
+}
+
+.column:not(:last-child) {
+	margin-right: 12px;
+}
+
+.columnTitle {
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 19px;
+	margin: 8px 12px 8px 12px;
+}
+
+.cardHolder {
+	flex-grow: 1;
+	overflow-y: auto;
+}
+
+.adder{
+	border-radius: 3px;
+	background: #DFE3E6;
+	padding: 12px 12px 12px 12px;
+	color: #6B808C;
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.editor {
+	width: 100%;
+}
+
+.addCardHolder {
+	margin-top: 3px; /* can't see last card's bottom border */
+}
+
+.button {
+	display: flex;
+	align-items: center;
+}
+
+.button > img, .button > span {
+	vertical-align: middle;
+}
+
+.card, .fakecard, .draggedcard {
+	background: #FFFFFF;
+	box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+	border-radius: 3px;
+	font-size: 13px;
+	line-height: 19px;
+	padding: 8px 8px 8px 12px; /* top right bottom left */
+	margin-left: 12px;
+	margin-right: 12px;
+	flex-shrink: 0;
+}
+
+.fakecard {
+	background: #C9D2D9;
+	height: 25px;
+}
+
+.draggedcard {
+	transform: rotate(20deg);
+	z-index: 1000;
+	position: absolute;
+	opacity: 0.5;
+}
+
+.card:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+#addColumnHolder {
+	float: left;
+}
+
+.addCardHolder {
+	float: left;
+}
+
+.newNameInput {
+	font-family: inherit;
+	padding: 8px 12px 8px 12px;
+	width: 100%;
+}
+
+.addButton {
+	background: #39C071;
+	border-radius: 3px;
+	color: #FFFFFF;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.startEditingButton {
+	float: left;
+}
+
+.addRow {
+	margin-top: 8px;
+}
+
+.addRow > img {
+	margin-left: auto;
+}
+
+.closeEditor, .addButton, .startEditingButton {
+	cursor: pointer;
+}
+
+.startEditingButton.inactive {
+	display: none;
+}
+
+.editor.inactive {
+	display: none;
+}
+
+.startEditingButton > span {
+	margin-left: 8px;
+}

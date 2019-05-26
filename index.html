@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/kanban.css">
+		<script src="js/jquery-3.4.1.js"></script>
+		<script src="js/kanban.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="addColumnHolder" class="adder"> 
+				<div class="addColumnEditor editor inactive">
+					 <input type="text" class="newNameInput" placeholder="Введите название колонки" />
+					 <div class="addRow button"> 
+						<span class="addButton">Добавить колонку</span>
+						<img src="resources/cross.svg" class="closeEditor"></img>
+					 </div>
+				</div>
+				<div class="startEditingButton button">
+					<img src="resources/plus.svg" id="plusSign"></img>
+					<span class="addText">Добавить еще одну колонку</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
